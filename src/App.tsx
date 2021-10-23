@@ -6,8 +6,10 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 function App(): JSX.Element {
   return (
     <BrowserRouter>
-      <Header />
-      <Route path="/" />
+      <div className='App'>
+        <Header />
+        <Route path="/" />
+      </div>
     </BrowserRouter>
   );
 }
