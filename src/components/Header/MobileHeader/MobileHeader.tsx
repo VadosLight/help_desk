@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./MobileHeader.css";
+import "./MobileHeader.scss";
 
 export const MobileHeader = (): JSX.Element => {
   const isVisibleMenu = useState<boolean>(false);

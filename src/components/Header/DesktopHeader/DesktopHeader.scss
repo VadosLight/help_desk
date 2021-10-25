@@ -1,0 +1,10 @@
+.DesktopHeader {
+    position: relative;
+    width: 100vw;
+
+    &__SwitchTheme {
+        position: relative;
+        top: 8px;
+        right: 1px;
+    }
+}

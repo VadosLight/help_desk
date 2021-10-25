@@ -22,7 +22,6 @@
     "pretty": true,
     "noUnusedParameters": true,
     "noImplicitAny": true,
-    "noUnusedLocals": true,
   },
   "include": [
     "src"
