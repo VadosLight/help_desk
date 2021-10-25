@@ -1,11 +1,12 @@
-import "./App.scss";
 import { CSSProperties, useContext, useEffect } from "react";
 import { Header } from "./components";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { overrideThemeVariables } from "ui-neumorphism";
 import { ThemeContext } from './storage'
+import * as Pages from './pages'
 
 import 'ui-neumorphism/dist/index.css'
+import "./App.scss";
 
 const darkStyle: CSSProperties = {
   backgroundColor: '#444444',
@@ -38,9 +39,14 @@ function App(): JSX.Element {
     <BrowserRouter>
       <div className='App' style={style}>
         <Header />
-        <Switch>
-          <Route exact path="/" />
-        </Switch>
+        <main className="Main">
+          <Switch>
+            <Route exact path="/applications" component={Pages.Applications} />
+            <Route exact path="/manuals" component={Pages.Manuals} />
+            <Route exact path="/software" component={Pages.Software} />
+            <Route exact path="/" component={Pages.Welcome} />
+          </Switch>
+        </main>
       </div>
     </BrowserRouter>
   );
