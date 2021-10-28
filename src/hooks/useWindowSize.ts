@@ -18,7 +18,7 @@ const getDeviceByWidth = (width: number): Device => {
   }
 };
 
-export function useWindowSize() {
+export const useWindowSize = () => {
   const [windowSize, setWindowSize] = useState<WindowSize>({
     width: window.innerWidth,
     height: window.innerHeight,

@@ -13,7 +13,7 @@
 
   & > main {
     margin: 24px;
-    min-width: 1000px;
+    width: clamp(340px, 94vw, 1200px);
     background-color: #e4ebf5;
   }
 }
@@ -21,15 +21,15 @@
 @media (max-width: 1152px) {
   .App {
     & > main {
-      min-width: 700px;
     }
   }
 }
 
 @media (max-width: 768px) {
   .App {
+
     & > main {
-      min-width: 400px;
+      margin: 16px;
     }
   }
 }

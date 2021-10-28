@@ -8,18 +8,17 @@ import * as Pages from './pages'
 import 'ui-neumorphism/dist/index.css'
 import "./App.scss";
 
-const darkStyle: CSSProperties = {
-  backgroundColor: '#444444',
+const darkStyleBg: CSSProperties = {
+  backgroundColor: 'var(--dark-bg)',
 }
 
-const lightStyle: CSSProperties = {
-  backgroundColor: '#e4ebf5',
-
+const lightStyleBg: CSSProperties = {
+  backgroundColor: 'var(--light-bg)',
 }
 
 function App(): JSX.Element {
   const { isDark } = useContext(ThemeContext);
-  const style = isDark ? darkStyle : lightStyle
+  const style = isDark ? darkStyleBg : lightStyleBg
 
   useEffect(() => {
     overrideThemeVariables({

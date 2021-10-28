@@ -4,17 +4,31 @@
   display: flex;
   flex-direction: row-reverse;
   margin: 16px 24px;
+  background-color: inherit;
 }
 
 .MobileMenu {
   @include position-center;
   position: fixed;
+  background-color: inherit;
+
 
   height: 100vh;
   width: 100vw;
 
   &__Content {
     @include position-center;
-    margin: 24px;
+    // margin: 24px;
+
+    &__Control {
+      position: absolute;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+      height: 90vh;
+      margin-right: 16px;
+    }
   }
 }
