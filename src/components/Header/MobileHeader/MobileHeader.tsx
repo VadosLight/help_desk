@@ -1,8 +1,7 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import { Fab, Switch } from 'ui-neumorphism';
-import { useWindowSize } from "../../../hooks";
-import { ThemeContext } from '../../../storage'
+import { useTheme, useWindowSize } from "../../../hooks";
 
 import "./MobileHeader.scss";
 
@@ -13,7 +12,7 @@ type MobileMenuType = {
 const MobileMenu = ({
   toggleVisibilityMenu,
 }: MobileMenuType): JSX.Element => {
-  const { isDark, toggleTheme } = useContext(ThemeContext)
+  const { isDark, toggleTheme } = useTheme()
 
 
   return <div className="MobileMenu" style={{
@@ -37,7 +36,7 @@ const MobileMenu = ({
 }
 
 export const MobileHeader = (): JSX.Element => {
-  const { isDark } = useContext(ThemeContext)
+  const { isDark } = useTheme()
   const [isVisibleMenu, setVisibilityMenu] = useState<boolean>(false);
   const ws = useWindowSize()
   const handlers = useSwipeable({

@@ -1,24 +1,16 @@
-import { CSSProperties, useContext, useEffect } from "react";
+import { useEffect } from "react";
 import { Header } from "./components";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { overrideThemeVariables } from "ui-neumorphism";
-import { ThemeContext } from './storage'
 import * as Pages from './pages'
 
 import 'ui-neumorphism/dist/index.css'
 import "./App.scss";
-
-const darkStyleBg: CSSProperties = {
-  backgroundColor: 'var(--dark-bg)',
-}
-
-const lightStyleBg: CSSProperties = {
-  backgroundColor: 'var(--light-bg)',
-}
+import { useTheme } from "./hooks";
 
 function App(): JSX.Element {
-  const { isDark } = useContext(ThemeContext);
-  const style = isDark ? darkStyleBg : lightStyleBg
+  const { themeColors } = useTheme()
+  // const style = isDark ? darkStyleBg : lightStyleBg
 
   useEffect(() => {
     overrideThemeVariables({
@@ -36,7 +28,7 @@ function App(): JSX.Element {
 
   return (
     <BrowserRouter>
-      <div className='App' style={style}>
+      <div className='App' style={themeColors}>
         <Header />
         <main className="Main">
           <Switch>

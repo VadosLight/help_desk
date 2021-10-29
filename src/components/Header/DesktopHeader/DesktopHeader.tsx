@@ -1,11 +1,10 @@
-import { useContext } from 'react';
 import { useHistory } from 'react-router';
 import { Button, Switch, Alert } from 'ui-neumorphism';
-import { ThemeContext } from '../../../storage';
+import { useTheme } from '../../../hooks';
 import './DesktopHeader.scss'
 
 export const DesktopHeader = (): JSX.Element => {
-  const { isDark, toggleTheme } = useContext(ThemeContext)
+  const { isDark, toggleTheme } = useTheme()
   const history = useHistory()
 
   return <div className="DesktopHeader">

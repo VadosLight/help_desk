@@ -9,25 +9,18 @@
   min-width: 100vw;
   min-height: 100vh;
   overflow: auto;
-  background-color: #e4ebf5;
 
   & > main {
     margin: 24px;
     width: clamp(340px, 94vw, 1200px);
-    background-color: #e4ebf5;
   }
 }
 
 @media (max-width: 1152px) {
-  .App {
-    & > main {
-    }
-  }
 }
 
 @media (max-width: 768px) {
   .App {
-
     & > main {
       margin: 16px;
     }
