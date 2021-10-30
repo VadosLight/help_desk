@@ -1,0 +1,28 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: auto;
+
+  & > main {
+    margin: 24px;
+    width: clamp(340px, 94vw, 1200px);
+  }
+}
+
+@media (max-width: 1152px) {
+}
+
+@media (max-width: 768px) {
+  .App {
+    & > main {
+      margin: 16px;
+    }
+  }
+}

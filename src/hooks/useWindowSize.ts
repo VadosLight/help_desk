@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-type Device = "mobile" | "tablet" | "desctop";
+type Device = "mobile" | "tablet" | "desktop";
 
 type WindowSize = {
   width: number;
@@ -14,11 +14,11 @@ const getDeviceByWidth = (width: number): Device => {
   } else if (width < 1152) {
     return "tablet";
   } else {
-    return "desctop";
+    return "desktop";
   }
 };
 
-export function useWindowSize() {
+export const useWindowSize = () => {
   const [windowSize, setWindowSize] = useState<WindowSize>({
     width: window.innerWidth,
     height: window.innerHeight,
@@ -26,7 +26,7 @@ export function useWindowSize() {
   });
 
   useEffect(() => {
-    function handleResize() {
+    const handleResize = () => {
       setWindowSize({
         width: window.innerWidth,
         height: window.innerHeight,
@@ -35,7 +35,7 @@ export function useWindowSize() {
     }
 
     window.addEventListener("resize", handleResize);
-    handleResize();
+
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
