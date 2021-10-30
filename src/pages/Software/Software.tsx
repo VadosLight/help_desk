@@ -4,6 +4,6 @@ import './Software.scss';
 export const Software = (): JSX.Element => {
 
     return <div className="Software">
-        Software
+        soft
     </div>
 }

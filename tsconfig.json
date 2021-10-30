@@ -20,8 +20,10 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "pretty": true,
-    "noUnusedParameters": true,
+    "noUnusedParameters": false,
     "noImplicitAny": true,
+    "noUnusedLocals": false,
+    "allowUnusedLabels": true
   },
   "include": [
     "src"
