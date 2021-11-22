@@ -1,6 +1,6 @@
 import { useWindowSize } from "../../hooks";
 import { DesktopHeader } from "./DesktopHeader/DesktopHeader";
-import { MobileHeader } from "./MobileHeader/MobileHeader";
+// import { MobileHeader } from "./MobileHeader/MobileHeader";
 import "./Header.scss";
 
 export const Header = (): JSX.Element => {
@@ -8,7 +8,8 @@ export const Header = (): JSX.Element => {
 
   return (
     <header className="Header">
-      {ws.device === "mobile" ? <MobileHeader /> : <DesktopHeader />}
+      {/* {ws.device === "mobile" ? <MobileHeader /> : <DesktopHeader />} */}
+      {ws.device === "mobile" ? null : <DesktopHeader />}
     </header>
   );
 };

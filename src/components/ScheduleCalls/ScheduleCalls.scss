@@ -1,0 +1,8 @@
+.ScheduleCalls {
+    &__Lesson {
+        &.Active {
+            color: var(--success);
+            font-weight: 600;
+        }
+    }
+}

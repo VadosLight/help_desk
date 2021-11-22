@@ -1,0 +1,11 @@
+@import '../../utils/scss/vars.scss';
+
+.MobileControlPanel {
+    height: $mobile-footer-height;
+    width: 100vw;
+    background-color: tomato; 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

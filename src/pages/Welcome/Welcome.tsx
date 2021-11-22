@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography } from "ui-neumorphism";
-import { SheldueCalls } from "../../components";
+import { ScheduleCalls } from "../../components";
 import { useTheme } from "../../hooks";
 import "./Welcome.scss";
 
@@ -10,7 +10,7 @@ export const Welcome = (): JSX.Element => {
   return (
     <div className="Welcome">
       <Typography dark={isDark}>
-        <SheldueCalls />
+        <ScheduleCalls />
       </Typography>
     </div>
   );

@@ -1,7 +1,16 @@
 .Header {
-    position: relative;
-    width: 100vw;
-    min-height: 50px;
-    padding: 8px 16px;
+  position: relative;
+  width: 100%;
+  min-height: 65px;
+  padding: 8px 16px;
+  box-sizing: border-box;
+}
 
+@media (max-width: 1152px) {
+}
+
+@media (max-width: 768px) {
+  .Header {
+    min-height: 30px;
+  }
 }

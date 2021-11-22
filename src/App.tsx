@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Header } from "./components";
+import { Footer, Header } from "./components";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { overrideThemeVariables } from "ui-neumorphism";
 import * as Pages from './pages'
@@ -38,6 +38,7 @@ function App(): JSX.Element {
             <Route exact path="/" component={Pages.Welcome} />
           </Switch>
         </main>
+        <Footer />
       </div>
     </BrowserRouter>
   );

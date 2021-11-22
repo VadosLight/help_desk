@@ -1,18 +1,20 @@
+@import "./utils/scss/vars.scss";
+
 .App {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 
-  width: 100vw;
   height: 100vh;
-  min-width: 100vw;
   min-height: 100vh;
+  max-height: 100vh;
   overflow: auto;
 
   & > main {
     margin: 24px;
     width: clamp(340px, 94vw, 1200px);
+    flex: 1 1 auto;
   }
 }
 
@@ -21,6 +23,7 @@
 
 @media (max-width: 768px) {
   .App {
+    padding-bottom: $mobile-footer-height;
     & > main {
       margin: 16px;
     }
