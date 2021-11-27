@@ -13,7 +13,7 @@
 
   & > main {
     margin: 24px;
-    width: clamp(340px, 94vw, 1200px);
+    width: clamp(340px, 94%, 1200px);
     flex: 1 1 auto;
   }
 }
