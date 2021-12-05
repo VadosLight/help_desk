@@ -1,0 +1,17 @@
+.Software {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 48px;
+}
+
+@media (max-width: 1152px) {
+}
+
+@media (max-width: 768px) {
+  .Software {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}

@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mdi/js": "^6.5.95",
+    "@mdi/react": "^1.5.0",
     "@testing-library/jest-dom": "5.14.1",
     "@testing-library/react": "11.2.7",
     "@testing-library/user-event": "12.8.3",
@@ -25,8 +27,7 @@
     "web-vitals": "1.1.2"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
-    "startnix": "react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -53,5 +54,8 @@
     "@types/lodash": "^4.14.176",
     "@types/react-router": "5.1.17",
     "@types/react-router-dom": "5.3.1"
+  },
+  "exports": {
+    "./comp/": "./src/components/"
   }
 }

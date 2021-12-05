@@ -4,6 +4,6 @@ import './Applications.scss';
 export const Applications = (): JSX.Element => {
 
     return <div className="Applications">
-        Applications
+        Заявки
     </div>
 }

@@ -1,11 +1,25 @@
-@import '../../utils/scss/vars.scss';
+@import "../../utils/scss/vars.scss";
 
 .MobileControlPanel {
-    height: $mobile-footer-height;
-    width: 100vw;
-    background-color: tomato; 
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  height: $mobile-footer-height;
+  width: 100vw;
+  // background-color: tomato;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  &__Content {
+    height: 100%;
+    margin: 0 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    & > div {
+      width: 18%;
+      height: 80%;
+    }
+  }
 }
